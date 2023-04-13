@@ -15,9 +15,9 @@ namespace LINQ
             videoGameList.Add("Minecraft");
             videoGameList.Add("League of Legends");
 
-            var longestName = videoGameList.OrderBy(name => name.Length).Last();
+            var organizedList = videoGameList.OrderByDescending(name => name.Length);
 
-           Console.Write(longestName);
+           foreach(var game in organizedList) { Console.WriteLine(game); }
 
         }
     }
